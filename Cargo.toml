@@ -2,4 +2,8 @@
 resolver = "2"
 members = [
     "hello_world",
+    # TODO
+    "punadvanture",
+    # TODO
+    "mini_arcade",
 ]
