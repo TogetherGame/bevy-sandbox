@@ -1,0 +1,8 @@
+[package]
+name = "common"
+version = "0.1.0"
+description = "Common utils that share among the entire workspace"
+edition = "2021"
+
+[dependencies]
+bevy = "0.8"
