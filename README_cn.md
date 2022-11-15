@@ -24,7 +24,15 @@
     cd bevy-sandbox
     ```
 
-4. 由于此仓库为一个 Rust workspace, 为了执行 workspace 下的某一项目，你需要先 `cd` 至项目目录并执行 `cargo run` 或以此方式在仓库主目录直接运行某一项目 (以 hello_world 为例):
+4. (Linux 用户) 安装依赖:
+
+    - `gcc`.
+
+    - `alsa-lib` 开发工具, 例如 `alsa-lib-devel` (RedHat 类).
+
+    - `libudev` 开发工具, 例如 `systemd-devel` (RedHat 类), `libudev-dev` (Debian 类).
+
+5. 由于此仓库为一个 Rust workspace, 为了执行 workspace 下的某一项目，你需要先 `cd` 至项目目录并执行 `cargo run` 或以此方式在仓库主目录直接运行某一项目 (以 hello_world 为例):
 
     ```console
     cargo run -p hello_world

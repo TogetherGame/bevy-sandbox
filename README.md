@@ -28,9 +28,9 @@ A collection of projects written with Rust using Bevy game engine.
 
     - (Linux) Install `gcc`.
 
-    - (Linux) Install dev package of `alsa-lib`, such as `alsa-lib-devel` on Fedora.
+    - (Linux) Install dev package of `alsa-lib`, such as `alsa-lib-devel` on RedHat.
 
-    - (Linux) Install dev package of `libudev`, such as `systemd-devel` on Fedora, `libudev-dev` on Debian distros.
+    - (Linux) Install dev package of `libudev`, such as `systemd-devel` on RedHat, `libudev-dev` on Debian distros.
 
 5. Since this project is a workspace, in order to run certain project, you have to
 either `cd` into that project's directory then execute `cargo run` or run it inside the main directory as follows:
