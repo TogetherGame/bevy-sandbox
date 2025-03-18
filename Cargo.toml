@@ -2,7 +2,8 @@
 resolver = "2"
 members = [
     "hello_world",
-    "flight_simulator"
+    "flight_simulator",
+    "clappy",
 ]
 
 [workspace.dependencies]

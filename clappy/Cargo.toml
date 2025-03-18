@@ -1,0 +1,9 @@
+[package]
+name = "clappy"
+version = "0.1.0"
+edition = "2024"
+description = "(Un)official desktop companion for rust-clippy, that just applauds yor for the *perfect* code you've written"
+
+[dependencies]
+bevy.workspace = true
+notify = "8.0.0"
