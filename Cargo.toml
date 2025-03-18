@@ -6,4 +6,4 @@ members = [
 ]
 
 [workspace.dependencies]
-bevy = "0.11"
+bevy = "0.15"

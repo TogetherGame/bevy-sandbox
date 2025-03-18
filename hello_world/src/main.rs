@@ -35,21 +35,21 @@ fn show_hello(mut cmd: Commands, assets: Res<AssetServer>) {
     // Commands 指程序运行前的"大管家"，可以借助 commands 来管理程序运行时将需要的所有实体, 包括 Resource
     // 这里使用了 spawn 添加了游戏必要组件 "Camera2d", 也就是用于显示游戏内一切的实体，缺少 Camera 的话
     // 游戏运行后只会显示黑屏。
-    cmd.spawn(Camera2dBundle::default());
+    cmd.spawn(Camera2d);
 
     // 添加 Text2d bundle, bundle 表现为组件的集合，Text2dBundle 就包含了 2D 文字组件(Text)，控制位移形变的组件(Transform)等等.
     // 这里只初始化了显示的文字，字体，大小，字体颜色，其余属性使用 `default()` 默认的定义。
-    cmd.spawn(Text2dBundle {
-        text: Text::from_section(
-            HELLO_WORLD,
-            TextStyle {
-                font: assets.load("../../assets/fonts/GnuUnifontFull.ttf"),
-                font_size: 40.0,
-                color: Color::BLACK,
-            },
-        ),
+    let font = assets.load("../../assets/fonts/GnuUnifontFull.ttf");
+    let text_font = TextFont {
+        font,
+        font_size: 40.0,
         ..Default::default()
-    })
+    };
+    cmd.spawn((
+        Text2d::new(HELLO_WORLD),
+        text_font,
+        TextColor(Color::BLACK),
+    ))
     // 插入之前定义的 Unit Struct `HelloText` 组件，作为"标签"
     .insert(HelloText);
 }
